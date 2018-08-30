@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Controller</title>
+
+    <style>
+      html,
+      body,
+      .wrapper {
+        height: 100%;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 2em;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+      }
+
+      .wrapper > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .empty {
+        background-color: #333;
+      }
+
+      .action {
+        color: #ccc;
+        background-color: #666;
+        cursor: pointer;
+      }
+
+      .stop {
+        background-color: #999;
+      }
+      .rotate180 {
+      -webkit-transform: rotateZ(180deg);
+      -moz-transform: rotateZ(180deg);
+      -o-transform: rotateZ(180deg);
+      -ms-transform: rotateZ(180deg);
+      
+      }
+      .camera {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="camera"><img class="rotate180" src="http://192.168.1.104:8090/?action=stream"></div>
+    <div class="camera">
+      <form action="" method="post">
+      {% csrf_token %}
+        {{ form }}
+      <input type="submit" value="Login">
+      </form>
+    </div>
+    <footer>
+        Witaj {{request.user}}
+
+    </footer>
+  </body>
+</html>
