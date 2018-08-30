@@ -11,7 +11,7 @@ class StopView(View):
     
 class ForwardView(View):
     def get(self, request):
-        bc.botforward(1000)
+        bc.botforward(500)
         return render(request, 'controllinks.html')
 
 class ReverseView(View):
@@ -26,6 +26,6 @@ class LeftView(View):
     
 class RightView(View):
     def get(self, request):
-        bc.botright(1000)
+        bc.botright(500)
         return render(request, 'controllinks.html')
     

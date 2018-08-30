@@ -40,10 +40,23 @@
       .stop {
         background-color: #999;
       }
+      .rotate180 {
+      -webkit-transform: rotateZ(180deg);
+      -moz-transform: rotateZ(180deg);
+      -o-transform: rotateZ(180deg);
+      -ms-transform: rotateZ(180deg);
+      
+      }
+      .camera {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
 
   <body>
+    <div class="camera"><img class="rotate180" src="http://192.168.1.104:8090/?action=stream"></div>
     <div class="wrapper">
       <div class="empty"></div>
       <a href="/forward"><div class="action">Forward</div></a>

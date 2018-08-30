@@ -104,9 +104,9 @@ def botforward(speed):
     pwm.set_pwm(2, speed, 0) #silnik lewy
     pwm.set_pwm(3, 0, speed) #silnik lewy
     pwm.set_pwm(4, speed, 0) #silnik lewy
-    pwm.set_pwm(5, 0, speed)  #ilnik prawy
+    pwm.set_pwm(5, 0, speed+1500)  #ilnik prawy
     pwm.set_pwm(6, 0, 0)  #silnik prawy
-    pwm.set_pwm(7, 0, speed)  #silnik prawy
+    pwm.set_pwm(7, 0, speed+1500)  #silnik prawy
     
 def botstop():
     pwm.set_pwm(2, 0, 0) #silnik lewy
@@ -121,24 +121,24 @@ def botreverse(speed):
     pwm.set_pwm(3, 0, speed) #silnik lewy
     pwm.set_pwm(4, 0, 0) #silnik lewy
     pwm.set_pwm(5, 0, 0)  #ilnik prawy
-    pwm.set_pwm(6, 0, speed)  #silnik prawy
-    pwm.set_pwm(7, 0, speed)  #silnik prawy
+    pwm.set_pwm(6, 0, speed+500)  #silnik prawy
+    pwm.set_pwm(7, 0, speed+500)  #silnik prawy
     
 def botleft(speed):
     pwm.set_pwm(2, 0, speed) #silnik lewy
     pwm.set_pwm(3, 0, speed) #silnik lewy
     pwm.set_pwm(4, 0, 0) #silnik lewy
-    pwm.set_pwm(5, 0, speed)  #ilnik prawy
+    pwm.set_pwm(5, 0, speed+500)  #ilnik prawy
     pwm.set_pwm(6, 0, 0)  #silnik prawy
-    pwm.set_pwm(7, 0, speed)  #silnik prawy
+    pwm.set_pwm(7, 0, speed+500)  #silnik prawy
     
 def botright(speed):
     pwm.set_pwm(2, speed, 0) #silnik lewy
     pwm.set_pwm(3, 0, speed) #silnik lewy
     pwm.set_pwm(4, speed, 0) #silnik lewy
     pwm.set_pwm(5, 0, 0)  #ilnik prawy
-    pwm.set_pwm(6, 0, speed)  #silnik prawy
-    pwm.set_pwm(7, 0, speed)  #silnik prawy
+    pwm.set_pwm(6, 0, speed+500)  #silnik prawy
+    pwm.set_pwm(7, 0, speed+500)  #silnik prawy
 
 
 #testy czy dzialczy
