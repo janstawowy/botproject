@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from control.views import StopView, ForwardView, ReverseView, LeftView, RightView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', StopView.as_view()),
+    path('forward', ForwardView.as_view()),
+    path('reverse', ReverseView.as_view()),
+    path('left', LeftView.as_view()),
+    path('right', RightView.as_view()),
 ]
